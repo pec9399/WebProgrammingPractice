@@ -62,12 +62,6 @@ h2{
     background-repeat: no-repeat;
 }
 
-img{
-    width:80px;
-    height:80px;
-    visibility:visible;
-   
-}
 
 article{
     margin:auto;
@@ -76,8 +70,4 @@ article{
     height:310px;
     background-repeat: no-repeat;
     background:black;
-}
-
-article h1, p{
-    color:white;
 }
