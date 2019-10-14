@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<head>
+    <title>EunChan Park Personal Homepage</title>
+    <link href="index.css" rel="stylesheet" type="text/css"/>
+    <style>
+        h1{
+            padding-top:20px;
+            text-shadow: 2px 2px 2px black;
+            letter-spacing:2px;
+            font-size:20pt;
+        }
+		#yo{
+            text-shadow: 2px 2px 2px black;
+            letter-spacing:2px;
+            font-size:14pt;
+        }
+		#hint{
+			text-shadow: 2px 2px 2px black;
+            letter-spacing:2px;
+            font-size:14pt;
+		}
+		#cool{
+            text-shadow: 2px 2px 2px black;
+            letter-spacing:2px;
+		}
+	</style>
+</head>
+<body>
+    <ul class ="navi">
+        <li>
+            <a href="./index.html">Home</a>
+        </li>
+        <li>
+            <a href="./courses.html">Courses</a>
+        </li>
+        <li>
+            <a href="./hobby.html">Hobby</a>
+        </li>
+        <li class="selected">
+            <a href="./game.html">Game</a>
+        </li>
+    </ul>
+    <br>
+    <article>
+        <embed src="bgm.mp4" autostart="true" width="0" height="0" type="video/mp4"></embed>
+
+        <div class = "game">
+            <h1>선배의 번호를 따보자 </h1>
+            <p id="yo">  <br>
+            "선배님... 번호 좀 주세요 ㅠㅠ"<br><br>
+            (1 ~ 100 사이 숫자를 찍어보자) </p>
+            
+            <p id="cool">혹시... <input type = "text" id="guess" value='' maxlength=3> 
+            <input type="button" id = "confirm" value = "확인"/></p>
+        
+            <p id="cool" style="padding-right:74px;">틀린 횟수: <input type = "text" readonly id="num_guess" value=""></p>
+            <p id="hint"></p>
+  
+            <br><br>
+        </div>
+</body>
+
+<script type="text/javascript">
+    var randomnum = Math.floor(Math.random() * 100 + 1);
+    var box = document.getElementById("box");
+    var hey = document.getElementById("hint");
+    var guessn=0;
+    var element = document.getElementById("confirm");
+    element.addEventListener("click",function(){
+        if(isNaN(document.getElementById('guess').value)){
+            hey.innerHTML = "숫자만 입력해주세요";
+        }
+        else if(document.getElementById("guess").value < randomnum){   
+            document.getElementById("hint").value="UP!";
+            hey.innerHTML = "UP 업!";
+        }
+        else if(document.getElementById("guess").value > randomnum){
+            document.getElementById("hint").value="DOWN!";
+            hey.innerHTML = "DOWN 다운!";
+        }
+        else if(document.getElementById("guess").value == randomnum){
+            hey.innerHTML = "성공! (도전 횟수: " + guessn + ")";
+            alert(guessn + "번만에 클리어!");
+            guessn -= 1;
+        }
+
+        guessn++;
+        document.getElementById("num_guess").value=guessn + " 번";		
+            
+            
+    })
+
+    
+</script>
