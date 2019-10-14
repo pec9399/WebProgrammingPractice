@@ -67,7 +67,14 @@ article{
     margin:auto;
     text-align:center;
     width:50%;
-    height:310px;
+    height:400px;
     background-repeat: no-repeat;
     background:darksalmon;
+}
+
+.main{
+    border: 2px solid black;
+    margin:auto;
+    width:60%;
+    
 }

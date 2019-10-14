@@ -32,6 +32,41 @@
         article h1, p{
             color:white;
         }
+        .anim {
+            width: 10px;
+            height: 10px;
+            position:relative;
+            animation: 3s myanim;
+            animation-iteration-count: infinite;
+            margin-bottom: 50px;
+            margin-top: -50px;
+            border: solid;
+            border-width: 3px;
+            
+        }
+        @keyframes myanim
+    {
+        0% {
+            left:-200px; 
+            top:50px;
+            border-radius: 100px;
+            background: red;
+        
+        }
+        50% { 
+            left:200px; 
+            top:50px;
+            border-radius: 100px;
+            background: yellow;
+        }
+        100% {
+            left:-200px; 
+            top:50px;
+            border-radius: 100px;
+            background: red;
+        
+        }
+    }
 	</style>
 </head>
 <body>
@@ -42,11 +77,11 @@
         <li>
             <a href="./courses.html">Courses</a>
         </li>
-        <li>
-            <a href="./hobby.html">Hobby</a>
-        </li>
         <li class="selected">
             <a href="./game.html">Game</a>
+        </li>
+        <li>
+            <a href="./hobby.html">Hobby</a>
         </li>
         <li>
             <a href="./projects.html">Projects</a>
@@ -55,7 +90,8 @@
     <br>
     <article>
         <embed src="bgm.mp4" autostart="true" width="0" height="0" type="video/mp4"></embed>
-
+        <div class="anim"></div>
+        <br><p id="yo">UP/DOWN GAME</p>
         <div class = "game">
             <h1>선배의 번호를 따보자 </h1>
             <p id="yo">  <br>
