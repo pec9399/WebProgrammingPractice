@@ -5,7 +5,7 @@
 }
 
 body{
-    background-color:beige;
+    background-image:url("background.jpg");
 }
 
 .selected{
@@ -70,6 +70,7 @@ article{
     height:400px;
     background-repeat: no-repeat;
     background:darksalmon;
+    border: 3px solid black;
 }
 
 .main{
